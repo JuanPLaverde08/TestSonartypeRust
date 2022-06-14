@@ -1,0 +1,9 @@
+image: rust:latest
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: Test and Build
+          script:
+            - pipe: sonarsource/sonarcloud-scan:1.4.0
